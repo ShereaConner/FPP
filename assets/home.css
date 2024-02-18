@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Yeseva+One&display=swap');
+
+:root {
+    --bgcolor: #fff49e;
+}
+
+body {
+    background-color: var(--bgcolor);
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+nav a {
+    background-color: aliceblue;
+    padding: 30px;
+    flex: 1;
+    border-radius: 15px;
+    filter: drop-shadow(5px 5px 10px #000000);
+}
+
+
+.btn:hover .btn-slide-show-text1 {  margin-left: 65px;}  
+.btn-shadow-drop {  position: relative;  margin-top: 10%;  background: rgb(249, 250, 250);  padding: 20px;  font-size: 0.9em;  font-weight: 700;  letter-spacing: 5px;  text-transform: uppercase;  transition: all 0.3s ease-in-out 0s;  left: 0px;  top: 0px;  width: 180px;}  
+.btn-shadow-drop:hover {  left: 4px;  top: 4px;  box-shadow: rgb(255, 255, 255) 0px 0px 0px 0px;}  
+.btn-shadow-drop--orange {  border: 1px solid rgb(254, 174, 0);  color: rgb(254, 174, 0);  box-shadow: rgb(254, 174, 0) 4px 4px 0px 0px;}  
