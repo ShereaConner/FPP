@@ -1,3 +1,11 @@
 body {
     
 }
+
+.quote {
+    font-style: italic;
+}
+
+img {
+    max-width: 550px;
+}
