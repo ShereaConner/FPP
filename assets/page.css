@@ -1,11 +1,90 @@
-body {
-    
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,800;1,800&family=Source+Sans+3:ital@0;1&display=swap');
+:root {
+    --bg-color: #fffffe;
+    --breakout-color: #e3f6f5;
+    --highlight: #ffd803;
+    --heading-color: #272343;
+    --paragraph-color: #2d334a;
+    --strong: #bae8e8;
+    /* --heading-font: "Playfair Display", serif; */
+    --heading-font: "Merriweather Sans", sans-serif;
+    /* --paragraph-font: "Source Sans 3", sans-serif; */
+    --paragraph-text: "Lora", serif;
+    --quote-font: ;
+
+}
+
+h1 {
+    font-family: var(--heading-font);
+    color: var(--heading-color);
+    font-weight: 800;
+    font-optical-sizing: auto;
+    font-size: 5ch;
+    text-align: center;
+}
+
+p {
+    font-family: var(--paragraph-font);
+    color: var(--paragraph-color);
+    font-weight: 400;
+    font-style: normal;
+    font-optical-sizing: auto;
+    line-height: 1.5;
+    font-size: 25px;
+
+}
+
+
+
+
+
+
+.content-grid {
+    --padding-inline: 1rem;
+    --content-max-width: 85ch;
+    --breakout-max-width: 95ch;
+    --breakout-size: calc((var(--breakout-max-width) - var(--content-max-width)) / 2);
+
+
+    display: grid;
+    grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr) [breakout-start] var(--breakout-size) [content-start] min(100% - (var(--padding-inline) * 2), var(--content-max-width)) [content-end] var(--breakout-size) [breakout-end] minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.content-grid > * {
+    grid-column: content;
+}
+
+.content-grid > .breakout {
+    grid-column: breakout;
+}
+
+.content-grid > .full-width {
+    grid-column: full-width;
 }
 
 .quote {
     font-style: italic;
+    font-size: 30px;
 }
 
 img {
-    max-width: 550px;
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+nav.home {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+
+}
+
+.home a {
+    background-color: var(--highlight);
+    padding: 10px;
+    margin-top: 30px;
 }
